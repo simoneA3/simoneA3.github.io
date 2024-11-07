@@ -4,7 +4,7 @@
 <!-- p.main {border-style: solid; border-width: 3px; border-radius: 8px; padding: 5px;} -->
 div.main {
   background-color: gray;
-  margin: auto;
+  margin: 50%;
   text-align: center;
   width: 25%;
   height: 300px;
@@ -19,10 +19,19 @@ div.main {
     <title>Registration Page for Students</title>
 </head>
 <body>
-    <div class="main"> <h2>Register your account for online detention app</h2>
+    <div class="main"> 
+        <h2>Register your account for online detention app</h2>
+        <p>Choose who you are</p>
         <a href="reg_page_student.html"><input type="button" value="Student"></a>
         <a href="reg_page_teacher.html"><input type="button" value="Teacher"></a>
         <a href="reg_page_admin.html"><input type="button" value="Admin"></a>
+        <form>
+            <label for="name">Enter your name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Enter your email:</label><br>
+            <input type="text" id="email" name="email">
+        </form>
+        <a href="reg_page_student.html"><input type="button" value="Register!"></a>
     </div>
     
 
