@@ -4,8 +4,9 @@
 <!-- p.main {border-style: solid; border-width: 3px; border-radius: 8px; padding: 5px;} -->
 div.main {
   background-color: lightskyblue;
-  margin-top:100px; 
-  margin-left:300px;
+  position: absolute;
+  top: 300px;
+  left: 100px;
   text-align: center;
   width: 25%;
   height: 400px;
@@ -22,7 +23,7 @@ div.main {
 <body>
     <div class="main"> 
         <h2>Register your account for online detention app</h2>
-        <h3>Choose who you are</h3>
+        <h4>Choose who you are</h4>
         <a href="reg_page_student.html"><input type="button" value="Student"></a>
         <a href="reg_page_teacher.html"><input type="button" value="Teacher"></a>
         <a href="reg_page_admin.html"><input type="button" value="Admin"></a>
@@ -32,14 +33,14 @@ div.main {
             <label for="email">Enter your email:</label><br>
             <input type="text" id="email" name="email">
         </form>
-        <h3>Choose your highschool<h3>
+        <h4>Choose your highschool<h4>
         <select name="schools" id="schools">
             <option value="default">None</option>
             <option value="beck">Beckman highscool</option>
             <option value="">Xavier highscool</option>
             <option value="">Eleanor Roosevelt highscool</option>
             <option value="">Stuyvesant higshcool</option>
-          </select>
+        </select>
         <a href="reg_page_student.html"><input type="button" value="Register!"></a>
     </div>
     
