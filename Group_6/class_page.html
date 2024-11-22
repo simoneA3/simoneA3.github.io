@@ -26,9 +26,43 @@
         <div class="student list" id="student list">
 
         </div>
-        <button class="button" onclick="checkHours()">Check Hours</button>"
-        <button class="button" onclick="assignWork()">Assign Work</button>"
-
+        <button class="button" onclick="checkHours()">Check Hours</button>
+        <button class="button" onclick="assignWork()">Assign Work</button>
     </div>
+    <script>
+
+        const teacher = "Mrs. Smith"; // From the previous page
+        const school = "Greenwood High"; // From the previous page
+        const className = "Math 101"; 
+        const students = ["John Doe", "Jane Smith", "Michael Brown", "Emily Davis"]; // Random list
+
+
+        document.getElementById("class-name").textContent = `${className} (${teacher}, ${school})`;
+
+        const studentList = document.getElementById("student-list");
+        students.forEach((student, index) => {
+            const studentItem = document.createElement("div");
+            studentItem.classList.add("student-item");
+            studentItem.innerHTML = `
+                <span>${student}</span>
+                <button class="button" onclick="selectStudent(${index})">Select</button>
+            `;
+            studentList.appendChild(studentItem);
+        });
+
+        // Functions
+        function selectStudent(index) {
+            const student = students[index];
+            alert(`You selected ${student}`);
+        }
+
+        function checkHours() {
+            alert("Navigating to the 'Check Hours' page...");
+        }
+
+        function assignWork() {
+            alert("Navigating to the 'Assign Work' page...");
+        }
+    </script>
 </body>
 </html>
