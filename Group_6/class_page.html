@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <meta charset = "UTF-8">
+    <title>Class Page</title>
+    <style>
+        <!-- p.main {border-style: solid; border-width: 3px; border-radius: 8px; padding: 5px;} -->
+        div.main {
+        background-color: lightskyblue;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        text-align: center;
+        width: 25%;
+        height: 400px;
+        border: 5px solid black;
+        border-radius: 15px;
+        padding: 50px;
+        margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1 id="class name">Class Name</h1>
+        <div class="student list" id="student list">
+
+        </div>
+        <button class="button" onclick="checkHours()">Check Hours</button>
+        <button class="button" onclick="assignWork()">Assign Work</button>
+    </div>
+    <script>
+
+        const teacher = "Mrs. Smith"; // From the previous page
+        const school = "Greenwood High"; // From the previous page
+        const className = "Math 101"; 
+        const students = ["John Doe", "Jane Smith", "Michael Brown", "Emily Davis"]; // Random list
+
+
+        document.getElementById("class-name").textContent = `${className} (${teacher}, ${school})`;
+
+        const studentList = document.getElementById("student-list");
+        students.forEach((student, index) => {
+            const studentItem = document.createElement("div");
+            studentItem.classList.add("student-item");
+            studentItem.innerHTML = `
+                <span>${student}</span>
+                <button class="button" onclick="selectStudent(${index})">Select</button>
+            `;
+            studentList.appendChild(studentItem);
+        });
+
+        // Functions
+        function selectStudent(index) {
+            const student = students[index];
+            alert(`You selected ${student}`);
+        }
+
+        function checkHours() {
+            alert("Navigating to the 'Check Hours' page...");
+        }
+
+        function assignWork() {
+            alert("Navigating to the 'Assign Work' page...");
+        }
+    </script>
+</body>
+</html>

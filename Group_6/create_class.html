@@ -1,0 +1,66 @@
+
+<html lang="en">
+<head>
+<style>
+        <!-- p.main {border-style: solid; border-width: 3px; border-radius: 8px; padding: 5px;} -->
+        div.main {
+        background-color: lightskyblue;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        text-align: center;
+        width: 25%;
+        height: 400px;
+        border: 5px solid black;
+        border-radius: 15px;
+        padding: 50px;
+        margin: 20px;
+        }
+        .move-up { 
+      margin-top: -40px; /* Adjust the value as needed */ 
+    } 
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Class Page</title>
+</head>
+<body>
+    <div class="main"> 
+    <h2 class="move-up">Create Your Own Class</h2>
+
+       <!-- Trying to add image uploader --> 
+        <h4 class="move-up">Optional: Add an Image</h4>
+        <div class="first">
+            <p> <input type="file" accept="image/*" name="image" id=""file onchange="loadFile(event)"></p>
+            <p> <img id="output" width="65" /> </p>
+        </div>
+        <script type="text/javascript">
+            var loadFile=function(event) {
+                var image= document.getElementById('output');
+                image.src=URL.createObjectURL(event.target.files[0]);
+
+            };
+        </script>
+        <form>
+            <label for="name">Enter the class name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="subject">Optional: Type in your Subject</label><br>
+            <input type="text" id="subject" name="subject">
+        </form>
+        <h4>Invite Students From Your School<h4>
+        <select name="students" id="student">
+            <option value="default">None</option>
+            <option value="">Jane Doe</option>
+            <option value="">John Doe</option>
+            <option value="">Bobby Bob</option>
+            <option value="">Caleb Cone</option>
+        </select>
+        <p> <p>
+        <a href="successful_class_creation.html"><input type="button" value="Create Class"></a>
+        
+    </div>
+
+
+
+</body>
+</html>

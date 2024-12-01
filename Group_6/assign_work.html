@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <meta charset = "UTF-8">
+    <title>Assign Work</title>
+    <style>
+        div.main {
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        padding: 5px;
+        background-color: lightskyblue;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        text-align: center;
+        width: 25%;
+        height: 400px;
+        border: 5px solid black;
+        border-radius: 15px;
+        padding: 50px;
+        margin: 20px;
+        } <!-- -->
+
+        button {
+            background-color: lightgray;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        h5 {
+            color: black;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        #work {
+            color: black;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #assigned_date {
+            color: black;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        #due_date {
+            color: black;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        #other_notes {
+            color: black;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    </style>
+    <div class = "main">
+        <h1>Assign Work</h1>
+        <h5>Enter what you would like to assign to the student:</h5>
+
+         <form action="/reg_page_student">
+            <!-- <label for="work">Enter Work: </label> -->
+            <input type="work" id="work" name="work"><br><br>
+        </form>
+
+        <h5>Date Assigned:</h5>
+        <form action="/reg_page_student">
+            <!-- <label for="work">Enter Work: </label> -->
+            <input type="assigned_date" id="assigned_date" name="assigned_date"><br><br>
+        </form>
+
+        <h5>Date Due:</h5>
+        <form action="/reg_page_student">
+            <!-- <label for="work">Enter Work: </label> -->
+            <input type="due_date" id="due_date" name="due_date"><br><br>
+        </form>
+
+        <h5>Any Extra Notes:</h5>
+        <form action="/reg_page_student">
+            <!-- <label for="work">Enter Work: </label> -->
+            <input type="other_notes" id="other_notes" name="other_notes"><br><br>
+        </form>
+
+        <a href= <"https://simonea3.github.io/Group_6/reg_page_student.html"><button type="submit" formaction="reg_page_student">Finish</button></a>
+    </div>
