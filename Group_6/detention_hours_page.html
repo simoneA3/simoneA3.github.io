@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Students</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        div.main {
+            background-color: lightskyblue;
+            position: relative;
+            text-align: center;
+            width: 50%;
+            height: auto;
+            border: 5px solid black;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .list-of-students {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .student-entry {
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .student-entry input {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 5px;
+        }
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .buttons button {
+            flex: 1;
+            padding: 8px;
+            font-size: 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .detention-display {
+            font-size: 14px;
+            font-weight: bold;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Class Name</h1>
+            <div class="list-of-students">List of Students</div>
+
+            <div class="student-entry">
+                <input type="text" placeholder="Student's Name">
+                <div class="buttons">
+                    <button onclick="updateDetentionHours(this, 'add')">+</button>
+                    <span class="detention-display"><span class="detention-hours">0</span></span>
+                    <button onclick="updateDetentionHours(this, 'subtract')">-</button><label for="birthday">Current Due Date:</label>
+  <input type="date" id="due date" name="due date">
+                </div>
+            </div>
+
+            <div class="student-entry">
+                <input type="text" placeholder="Student's Name">
+                <div class="buttons">
+                    <button onclick="updateDetentionHours(this, 'add')">+</button>
+                    <span class="detention-display"><span class="detention-hours">0</span></span>
+                    <button onclick="updateDetentionHours(this, 'subtract')">-</button>Current Due Date:</label>
+  <input type="date" id="due date" name="due date">
+                </div>
+            </div>
+
+            <div class="student-entry">
+                <input type="text" placeholder="Student's Name">
+                <div class="buttons">
+                    <button onclick="updateDetentionHours(this, 'add')">+</button>
+                    <span class="detention-display"><span class="detention-hours">0</span></span>
+                    <button onclick="updateDetentionHours(this, 'subtract')">-</button>Current Due Date:</label>
+  <input type="date" id="due date" name="due date">
+  				</div>
+            </div>
+            
+            <a href= <"https://simonea3.github.io/Group_6/class_page.html"><button class="class-list-btn">Class List</button></a>
+  
+
+
+    <script>
+        function updateDetentionHours(button, action) {
+            // Find the parent container of the clicked button
+            const studentEntry = button.closest('.student-entry');
+            // Find the detention-hours span within this container
+            const detentionHoursSpan = studentEntry.querySelector('.detention-hours');
+            // Get the current detention hours
+            let detentionHours = parseInt(detentionHoursSpan.textContent);
+
+            // Update the detention hours based on the action
+            if (action === 'add') {
+                detentionHours++;
+            } else if (action === 'subtract') {
+                detentionHours = detentionHours > 0 ? detentionHours - 1 : 0;
+            }
+
+            // Update the displayed detention hours
+            detentionHoursSpan.textContent = detentionHours;
+        }
+    </script>
+</body>
+</html>
