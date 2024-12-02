@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+<style>
+
+div.main {
+  background-color: lightskyblue;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  text-align: center;
+  width: 25%;
+  height: 400px;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School registration</title>
+</head>
+<body>
+    <div class="main"> 
+        <h2>Create your school</h2>
+        <form>
+            <label for="name">Enter the name of your school:</label><br>
+            <input type="text" id="name" name="name"><br>
+        </form>
+        <div>
+            <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"></p>
+            <p><img id="output" width="200" /></p>
+        </div>
+          
+        <h4>Upload an image of your school<h4>
+        <script type="text/javascript">
+            var loadFile = function(event) 
+            {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <p> <p>
+        <a href="reg_page_admin.html"><input type="button" value="Register your school!"></a>
+    </div>
+    
+
+
+
+</body>
+</html>
