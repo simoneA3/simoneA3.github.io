@@ -21,38 +21,47 @@
         padding: 50px;
         margin: 20px;
         } <!-- -->
+
+        button {
+            background-color: lightgray;
+            font-size: 10px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <div class = "main">
+        <div class="students">
+            <span>John</span>
+            <span>Amy</span>
+            <span>Adam</span>
+            <span>Mary</span>
+            <span>Adam</span>
+            <span>Tyler</span>
+            <span>Sarah</span>
+            <span>Conner</span>
+        </div>
+
         <div class = "container">
             <h1 id="class name">Class Name</h1>
             <div class="student list" id="student list">
             </div>
-            <button class="button" onclick="checkHours()">Check Hours</button>
-            <button class="button" onclick="assignWork()">Assign Work</button>
+            <form action="detention_hours_page.html" method="get">
+                <button class="button" onclick="checkHours()">Check Hours</button>
+            </form>
+            <form action="assign_work.html" method="get">
+                <button class="button" onclick="assignWork()">Assign Work</button>
+            </form>
         </div>
         <script>
         
 
-            const teacher = "Mrs. Smith"; // From the previous page
-            const school = "Greenwood High"; // From the previous page
+            const teacher = "Mrs. Smith"; 
+            const school = "Greenwood High"; 
             const className = "Math 101"; 
-            const students = ["John Doe", "Jane Smith", "Michael Brown", "Emily Davis"]; // Random list
-
-
-            document.getElementById("class-name").textContent = `${className} (${teacher}, ${school})`;
-
-            const studentList = document.getElementById("student-list");
-            students.forEach((student, index) => {
-                const studentItem = document.createElement("div");
-                studentItem.classList.add("student-item");
-                studentItem.innerHTML = `
-                    <span>${student}</span>
-                    <button class="button" onclick="selectStudent(${index})">Select</button>
-                `;
-                studentList.appendChild(studentItem);
-            });
+            const students = ["John Doe", "Jane Smith", "Michael Brown", "Emily Davis"]; 
+                
 
             // Functions
             function selectStudent(index) {
