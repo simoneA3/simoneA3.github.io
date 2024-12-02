@@ -55,10 +55,10 @@
             <div class="student list" id="student list">
             </div>
             <form action="detention_hours_page.html" method="get">
-                <button class="button" onclick="checkHours()">Check Hours</button>
+                <button class="button">Check Hours</button>
             </form>
             <form action="assign_work.html" method="get">
-                <button class="button" onclick="assignWork()">Assign Work</button>
+                <button class="button">Assign Work</button>
             </form>
         </div>
         <script>
@@ -74,14 +74,6 @@
             function selectStudent(index) {
                 const student = students[index];
                 alert(`You selected ${student}`);
-            }
-
-            function checkHours() {
-                alert("Navigating to the 'Check Hours' page...");
-            }
-
-            function assignWork() {
-                alert("Navigating to the 'Assign Work' page...");
             }
         </script>
     </div>
